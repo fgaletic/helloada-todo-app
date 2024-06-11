@@ -6,7 +6,7 @@ const getTodos = async (req, res) => {
         res.status(200).json(allTodos)
 
     } catch (error) {
-        res.status(404).json({ message: "Any todo found" })
+        res.status(404).json({ message: "No todos found" })
     }
 }
 

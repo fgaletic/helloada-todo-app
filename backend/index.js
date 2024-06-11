@@ -1,15 +1,24 @@
-const express = require('express')
-const todoRouter = require('./routers/TodoRouter')
-const cors = require('cors')
-const { connectDatabase } = require('./mongo/index') // change this
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
 
-const app = express()
-const port = 3000
-app.use(cors())
-connectDatabase()
-app.use(express.json())
-app.use('/todos', todoRouter)
+import dotenv from 'dotenv';
+dotenv.config();
 
-app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`)
-}) 
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Connect to MongoDB
+const mongoURI = process.env.MONGODB_URI;
+if (!mongoURI) {
+  console.error('MONGODB_URI is not defined in the environment variables');
+  process.exit(1);
+}
+
+mongoose.connect(mongoURI)
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.error('MongoDB connection error:', err));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
