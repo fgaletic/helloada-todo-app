@@ -2,14 +2,23 @@
 const API_URL = "http://localhost:3000/todos"
 
 export const getTodos = async () => {
-    const response = await fetch(API_URL)
-    const data = await response.json()
-    return data
+    try {
+        const response = await fetch(`${API_URL}/`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        const data = await response.json()
+        return data
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 export const addTodo = async (data) => {
     try {
-        const response = await fetch(API_URL, {
+        const response = await fetch(`${API_URL}/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -21,7 +30,6 @@ export const addTodo = async (data) => {
     } catch (error) {
         console.log(error)
     }
-
 }
 
 export const deleteTodo = async (id) => {
