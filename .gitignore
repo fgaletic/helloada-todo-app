@@ -13,7 +13,8 @@
 # Ignore package manager directories
 /node_modules/
 /packages/
-
+# Ignore environment files
+.env
 # Ignore log files
 *.log
 
