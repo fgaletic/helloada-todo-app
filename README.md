@@ -13,7 +13,7 @@ Welcome to helloada-todo-app! This is a simple yet powerful todo application bui
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/helloada-todo-app.git
+   git clone https://github.com/fgaletic/helloada-todo-app.git
    ```
 
    Navigate to the project directory:
