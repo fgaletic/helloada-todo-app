@@ -1,11 +1,11 @@
 import express from 'express';
-import { getTodos, postTodo, getTodoById, patchTodo, deleteTodo } from '../controllers/todoController';
+import { getTodos, postTodo, getTodoById, patchTodo, deleteTodo } from '../controllers/todoController.js';
 const todoRouter = express.Router();
 
-todoRouter.get('/', getTodos);
-todoRouter.post('/', postTodo);
-todoRouter.get('/:id', getTodoById);
-todoRouter.patch('/:id', patchTodo);
-todoRouter.delete('/:id', deleteTodo);
+todoRouter.get('/todos', getTodos);
+todoRouter.post('/todos', postTodo);
+todoRouter.get('/todos/:id', getTodoById);
+todoRouter.patch('/todos/:id', patchTodo);
+todoRouter.delete('/todos/:id', deleteTodo);
 
 export default todoRouter;

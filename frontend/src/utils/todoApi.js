@@ -1,9 +1,9 @@
 
-const API_URL = "http://localhost:3000/todos"
+const API_URL = "http://localhost:3000"
 
 export const getTodos = async () => {
     try {
-        const response = await fetch(`${API_URL}/`, {
+        const response = await fetch(`${API_URL}/todos`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -18,7 +18,7 @@ export const getTodos = async () => {
 
 export const addTodo = async (data) => {
     try {
-        const response = await fetch(`${API_URL}/`, {
+        const response = await fetch(`${API_URL}/todos`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -34,7 +34,7 @@ export const addTodo = async (data) => {
 
 export const deleteTodo = async (id) => {
     try {
-        const response = await fetch(`${API_URL}/${id}`, {
+        const response = await fetch(`${API_URL}/todos/${id}`, {
             method: "DELETE"
         }
         )
@@ -48,7 +48,7 @@ export const deleteTodo = async (id) => {
 
 export const updateTodo = async (id, done) => {
     try {
-        const response = await fetch(`${API_URL}/${id}`, {
+        const response = await fetch(`${API_URL}/todos/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

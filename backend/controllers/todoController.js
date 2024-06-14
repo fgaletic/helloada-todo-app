@@ -1,6 +1,6 @@
-import Todo from '../schemas/todo';
+import Todo from '../schemas/todo.js'; 
 
-const getTodos = async (_, res) => {
+export const getTodos = async (_, res) => {
     try {
         const allTodos = await Todo.find();
         res.status(200).json(allTodos);
@@ -9,7 +9,7 @@ const getTodos = async (_, res) => {
     }
 }
 
-const postTodo = async (req, res) => {
+export const postTodo = async (req, res) => {
     try {
         const body = req.body;
         const data = {
@@ -25,7 +25,7 @@ const postTodo = async (req, res) => {
     }
 }
 
-const getTodoById = async (req, res) => {
+export const getTodoById = async (req, res) => {
     try {
         const { id } = req.params;
         const todoFound = await Todo.findById(id);
@@ -35,7 +35,7 @@ const getTodoById = async (req, res) => {
     }
 }
 
-const patchTodo = async (req, res) => {
+export const patchTodo = async (req, res) => {
     try {
         const body = req.body;
         const { id } = req.params;
@@ -46,7 +46,7 @@ const patchTodo = async (req, res) => {
     }
 }
 
-const deleteTodo = async (req, res) => {
+export const deleteTodo = async (req, res) => {
     try {
         const { id } = req.params;
         await Todo.findByIdAndDelete(id);
@@ -54,12 +54,4 @@ const deleteTodo = async (req, res) => {
     } catch (error) {
         return res.status(500).json({ message: "Error deleting todo" });
     }
-}
-
-module.exports = {
-    getTodos,
-    postTodo,
-    getTodoById,
-    patchTodo,
-    deleteTodo
 }
