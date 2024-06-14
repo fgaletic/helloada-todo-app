@@ -40,15 +40,8 @@ Welcome to helloada-todo-app! This is a simple yet powerful todo application bui
 
    Start managing your todos!
 
-### 3. Contributing
 
-   We welcome contributions! If you have ideas for improvements or new features, feel free to submit a pull request. Please follow the contributing guidelines.
-
-### 4. License
-
-   This project is licensed under the MIT License. See the LICENSE file for more details.
-
-### 5. Technical Choices
+### 3. Technical Choices
 
    Database Selection: MongoDB vs. SQL
 
@@ -58,7 +51,7 @@ Welcome to helloada-todo-app! This is a simple yet powerful todo application bui
    - Scalability: MongoDB's horizontal scaling capabilities make it suitable for handling large amounts of data and high-traffic applications.
    - Ease of Use: MongoDB's JSON-like document storage is intuitive and aligns well with the application's data model, simplifying the development process.
 
-### 6. Future Plans
+### 4. Future Plans
 
    #### Application Structure
 
@@ -72,14 +65,14 @@ Welcome to helloada-todo-app! This is a simple yet powerful todo application bui
    - Stateless Authentication: Ideal for RESTful APIs, as JWT allows for stateless authentication.
    - Easy Validation: JWT tokens can be easily validated and decoded, offering a reliable authentication mechanism.
 
-### 7. Deployment
+    #### Deployment
 
-   #### Serverless Deployment on Koyeb:
+    ##### a. Serverless Deployment on Koyeb:
 
    - Scalability: Koyeb offers serverless infrastructure, allowing the application to scale efficiently based on demand.
    - Cost Optimization: Serverless functions and container management help in optimizing costs.
 
-   #### Frontend Hosting on Netlify:
+    ##### b. Frontend Hosting on Netlify:
 
    - Continuous Deployment: Netlify provides seamless CI/CD, ensuring that new updates are deployed automatically.
    - CDN-Powered Hosting: Netlify’s CDN-powered hosting ensures fast and reliable delivery of the application to users.
