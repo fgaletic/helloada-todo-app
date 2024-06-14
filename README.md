@@ -41,9 +41,9 @@ Welcome to helloada-todo-app! This is a simple yet powerful todo application bui
    Start managing your todos!
 
 
-### 3. Technical Choices
+## Technical Choices
 
-   Database Selection: MongoDB vs. SQL
+   ### Database Selection: MongoDB vs. SQL
 
    For this project, we chose MongoDB over traditional SQL databases for the following reasons:
 
@@ -51,28 +51,28 @@ Welcome to helloada-todo-app! This is a simple yet powerful todo application bui
    - Scalability: MongoDB's horizontal scaling capabilities make it suitable for handling large amounts of data and high-traffic applications.
    - Ease of Use: MongoDB's JSON-like document storage is intuitive and aligns well with the application's data model, simplifying the development process.
 
-### 4. Future Plans
+## Future Plans
 
-   #### Application Structure
+   ### Application Structure
 
    - Router Improvements: Split the main router into separate routers for better organization and scalability.
    - Additional Routes: Add more routes to handle new features and functionalities.
-
-   #### Authentication with JWT
+   
+   ### Authentication with JWT
 
    - JWT Integration: Implement JWT (JSON Web Tokens) for authentication and authorization.
    - Security: JWT provides a secure way to authenticate users and protect routes.
    - Stateless Authentication: Ideal for RESTful APIs, as JWT allows for stateless authentication.
    - Easy Validation: JWT tokens can be easily validated and decoded, offering a reliable authentication mechanism.
-
-    #### Deployment
-
-    ##### a. Serverless Deployment on Koyeb:
+   
+   ### Deployment
+   
+   #### Serverless Deployment on Koyeb:
 
    - Scalability: Koyeb offers serverless infrastructure, allowing the application to scale efficiently based on demand.
    - Cost Optimization: Serverless functions and container management help in optimizing costs.
-
-    ##### b. Frontend Hosting on Netlify:
+   
+   #### Frontend Hosting on Netlify:
 
    - Continuous Deployment: Netlify provides seamless CI/CD, ensuring that new updates are deployed automatically.
    - CDN-Powered Hosting: Netlify’s CDN-powered hosting ensures fast and reliable delivery of the application to users.
