@@ -76,10 +76,10 @@ export const ListItem = ({ title, done, id, date, update, setUpdate }) => {
 						<div className="flex justify-center items-center gap-4">
 							<input type="checkbox" checked={isDone} className="checkbox checkbox-success checkbox-lg" onChange={handleCompleteTask}  />
 							<button className="btn btn-info " onClick={handleModifyTask}>
-								Modificar
+								Edit
 							</button>
 							<button className="btn btn-warning " onClick={handleDeleteTask}>
-								Borrar
+								Delete
 							</button>
 						</div>
 					</div>
@@ -93,13 +93,13 @@ export const ListItem = ({ title, done, id, date, update, setUpdate }) => {
 							<div className="flex flex-col h-20 md:h-none">
 								<input
 									type="text"
-									placeholder="Modifica la tarea"
+									placeholder="Modify the todo"
 									{...register('title', { required: true })}
 									className="input input-primary"
 								/>
 								{errors.title && (
 									<span className="text-sm text-red-500 mt-1">
-										Campo Requerido
+										Required Field
 									</span>
 								)}
 							</div>
@@ -118,14 +118,14 @@ export const ListItem = ({ title, done, id, date, update, setUpdate }) => {
 						</div>
 						<div className="w-auto flex justify-evenly  items-center gap-4">
 							<button className="btn btn-primary" type="submit">
-								Guardar
+								Save
 							</button>
 							<button
 								className="btn btn-accent"
 								type="submit"
 								onClick={handleModifyTask}
 							>
-								Cerrar
+								Cancel
 							</button>
 						</div>
 					</form>
